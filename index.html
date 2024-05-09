@@ -21,6 +21,8 @@
             .ct-label{
                 font-size: 0.5rem;
             }
+
+
         </style>
     </head>
     <body>
@@ -54,6 +56,15 @@
             </div>
             <div>
                 <div class="ct-chart"></div>
+                <div class="text-center my-5">El profesor que más memorias tiene es Andrés Villela con un total de 4.</div>
+
+            </div>
+            <div>
+            <div class="ct-chart-2"></div>
+            <div class="text-center my-5">Cada año desde el 2019 ha realizado 1 memoria en este ámbito.</div>
+            </div>
+            <div class="ct-chart-3"></div>
+            <div class="text-center my-5">El promedio de las memorias que ha guiado es de 6.8, sobre el promedio de este ámbito el cual es 6.09.</div>
             </div>
         </main>
         <script>
@@ -62,6 +73,30 @@
                 {
                     labels: ['VIVANCO, T.', 'FIGUEROA, B.', 'JELVEZ, P.', 'MONROY, F.', 'SILVA, Z.', 'GONZÁLEZ, A.','ALLARD, J.','VILLELA, A.','DURAN, A.','DE LOS RIOS, P.','CARO, I.','WUTH, P.','MOLLENHAUER, K.','HERNÁNDEZ, R.','CIRAVEGNA, E.','CARDENAS, L.','AMENABAR, A.'],
                     series: [[3, 2, 2, 1, 1, 1,2,4,1,1,3,1,2,2,1,1,1],],
+                },
+                {
+                    axisY: {
+                        offset: 50,
+                    },
+                }
+            );
+            new Chartist.Line(
+                ".ct-chart-2",
+                {
+                    labels: [2019, 2020, 2021, 2022],
+                    series: [[1, 1, 1, 1]],
+                },
+                {
+                    axisY: {
+                        offset: 50,
+                    },
+                }
+            );
+            new Chartist.Line(
+                ".ct-chart-3",
+                {
+                    labels: [2019, 2020, 2021, 2022],
+                    series: [[6.8, 7.0, 6.5, 7.0]],
                 },
                 {
                     axisY: {
